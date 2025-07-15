@@ -7,3 +7,5 @@ let address//this is undefined
 // typeof tells you the data type:
 console.table([typeof name,typeof address,typeof mobileNumber,typeof null]);
 // => null is not a type,it is an object.
+console.table([typeof sdjfbjehfbqw,typeof string,typeof undefined])
+// if any random word is written in front of typeof then it will o/p 'undefined'.Also,(typeof undefined) will also o/p undefined.
