@@ -49,14 +49,21 @@ let random = 1+2.5+7+"3"+14.12+5+"2"+1+1
 // num1=num22=num3=1 This is NOT a good way of assigning a single value to multivariables.
 
 
-// The difference b/w prefix and suffix increment(mdn).
+// The difference b/w postfix and prefix increment(mdn):
+// NOTE: Both will increase a by 1,but:
+// postfix(a++) => this returns the value BEFORE increment.
+// prefix(++a) => this returns the value AFTER increment.
+let a = 5
+let a_post = a++//a goes from 5->6(5 is before incr. and 6 is after incr.)
+let a_pre = ++a//a goes from 6->7(6 is before incr. and 7 is after incr.)
+console.log(`a_post:${a_post},a:${a},a_pre:${a_pre}`)
+
 
 
 // `${x}` simply means value of x which is defined somewhere in the code.
 let x = 5
-let y = 10
-console.log("x:${x}")
-console.log(`x:${x}`)
+//console.log("x:${x}")
+//console.log(`x:${x}`)
 // "" ke andar jo bhi hoga vo exact print ho jayega.
-console.log(`${x}`)
+//console.log(`${x}`)
 // Backtick is necessary for ${x},without it error will be shown.
