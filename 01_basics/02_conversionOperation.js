@@ -43,5 +43,7 @@ let random = 1+2.5+7+"3"+14.12+5+"2"+1+1
 console.log(random)
 console.log(typeof random)
 // Therefore data type of random is string.
+
+
 // let num1,num22,num3
 // num1=num22=num3=1 This is NOT a good way of assigning a single value to multivariables.
