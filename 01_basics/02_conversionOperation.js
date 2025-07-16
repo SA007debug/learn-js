@@ -49,5 +49,5 @@ console.log(typeof random)
 // num1=num22=num3=1 This is NOT a good way of assigning a single value to multivariables.
 
 
-// The difference b/w prefix and suffix increment.
+// The difference b/w prefix and suffix increment(mdn).
 
