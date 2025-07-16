@@ -22,5 +22,17 @@ let numInNumber = Number(num)
 let num2 = 7 //A number
 let num2_string = String(num2)
 
-console.log(num2_string)
-console.log(typeof num2_string) //the number is converted to a string
+//console.log(num2_string)
+//console.log(typeof num2_string) //the number is converted to a string
+let bool = 3
+let bool_string = String(bool)
+
+//console.log(typeof bool_string)
+//console.log(bool_string)
+
+
+let bool_bool = Boolean(bool)
+
+console.log(typeof bool_bool)
+console.log(bool_bool)
+// Any non-zero number,whether +ve or -ve is boolean true and only 0 is boolean false.Also,null and undefined both are false.
