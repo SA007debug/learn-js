@@ -47,3 +47,7 @@ console.log(typeof random)
 
 // let num1,num22,num3
 // num1=num22=num3=1 This is NOT a good way of assigning a single value to multivariables.
+
+
+// The difference b/w prefix and suffix increment.
+
