@@ -38,6 +38,10 @@ let bool_bool = Boolean(bool)
 // Any non-zero number,whether +ve or -ve is boolean true and only 0 is boolean false.Also,null and undefined both are false.
 
 
-console.log(1 + 2 + "2" + 4 + 1) //3241
+//console.log(1 + 2 + "2" + 4 + 1) //3241
 // String ke pehle number ki tarah add karega,string par aate hi string ki tarah add karne lagega.
-console.log(1+2.5+7+"3"+14.12+5+"2"+1+1) //10.5314.125211
+//console.log(1+2.5+7+"3"+14.12+5+"2"+1+1) //10.5314.125211
+let random = 1+2.5+7+"3"+14.12+5+"2"+1+1
+console.log(random)
+console.log(typeof random)
+// Therefore data type of random is string.
