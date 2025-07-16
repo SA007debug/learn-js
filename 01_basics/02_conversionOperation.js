@@ -19,8 +19,8 @@ let numInNumber = Number(num)
 
 //Conversion to string:
 
-let num2 = 7//A number
+let num2 = 7 //A number
 let num2_string = String(num2)
 
 console.log(num2_string)
-console.log(typeof num2_string)//the number is converted to a string
+console.log(typeof num2_string) //the number is converted to a string
