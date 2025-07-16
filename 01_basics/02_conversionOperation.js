@@ -40,8 +40,8 @@ let bool_bool = Boolean(bool)
 // String ke pehle number ki tarah add karega,string par aate hi string ki tarah add karne lagega.
 //console.log(1+2.5+7+"3"+14.12+5+"2"+1+1) //10.5314.125211
 let random = 1+2.5+7+"3"+14.12+5+"2"+1+1
-console.log(random)
-console.log(typeof random)
+// console.log(random)
+// console.log(typeof random)
 // Therefore data type of random is string.
 
 
@@ -51,3 +51,12 @@ console.log(typeof random)
 
 // The difference b/w prefix and suffix increment(mdn).
 
+
+// `${x}` simply means value of x which is defined somewhere in the code.
+let x = 5
+let y = 10
+console.log("x:${x}")
+console.log(`x:${x}`)
+// "" ke andar jo bhi hoga vo exact print ho jayega.
+console.log(`${x}`)
+// Backtick is necessary for ${x},without it error will be shown.
