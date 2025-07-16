@@ -40,4 +40,4 @@ let bool_bool = Boolean(bool)
 
 console.log(1 + 2 + "2" + 4 + 1) //3241
 // String ke pehle number ki tarah add karega,string par aate hi string ki tarah add karne lagega.
-console.log(1+2+"3"+4+5+"2"+1+1) //3345211
+console.log(1+2+7+"3"+14+5+"2"+1+1) //103145211
