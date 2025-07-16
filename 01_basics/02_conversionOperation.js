@@ -33,6 +33,11 @@ let bool_string = String(bool)
 
 let bool_bool = Boolean(bool)
 
-console.log(typeof bool_bool)
-console.log(bool_bool)
+//console.log(typeof bool_bool)
+//console.log(bool_bool)
 // Any non-zero number,whether +ve or -ve is boolean true and only 0 is boolean false.Also,null and undefined both are false.
+
+
+console.log(1 + 2 + "2" + 4 + 1) //3241
+// String ke pehle number ki tarah add karega,string par aate hi string ki tarah add karne lagega.\
+console.log(1+2+"3"+4+5+"2"+1+1) //3345211
