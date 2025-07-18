@@ -73,3 +73,8 @@ const id_1 = Symbol("hehe")
 const id_2 = Symbol("hehe")
 console.log(id_1 === id_2);//false
 console.log(id_1 == id_2);//false
+
+
+// Stack and Heap:
+// https://chatgpt.com/share/687a2c8e-16f4-8010-9f51-30bf4f5548fb
+// In heap,two or more variables having the same reference have the same memory in the memory.
