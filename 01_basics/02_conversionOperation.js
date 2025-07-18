@@ -62,8 +62,14 @@ let random = 1+2.5+7+"3"+14.12+5+"2"+1+1
 
 // `${x}` simply means value of x which is defined somewhere in the code,if it is not defined(only let x is written),then it will show undefined.
 let x = 5
-console.log("x:${x}")
-console.log(`x:${x}`)
+//console.log("x:${x}")
+//console.log(`x:${x}`)
 // "" ke andar jo bhi hoga vo exact print ho jayega.
-console.log(`${x}`)
+//console.log(`${x}`)
 // Backtick is necessary for ${x},without it error will be shown.
+
+
+const id_1 = Symbol("hehe")
+const id_2 = Symbol("hehe")
+console.log(id_1 === id_2);//false
+console.log(id_1 == id_2);//false
