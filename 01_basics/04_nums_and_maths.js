@@ -83,3 +83,4 @@ const randomInRange = getRandomNumber(1, 10);
 console.log(randomInRange); // e.g., 5 (random number between 1 and 10)
 
 
+// Coding is fun! Keep practicing and exploring the vast world of JavaScript. Remember, the more you code, the better you get. Happy coding! 😊
