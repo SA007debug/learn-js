@@ -84,3 +84,4 @@ console.log(randomInRange); // e.g., 5 (random number between 1 and 10)
 
 
 // Coding is fun! Keep practicing and exploring the vast world of JavaScript. Remember, the more you code, the better you get. Happy coding! 😊
+// coding is fun and you can do it! Discipline and consistency are the keys to success in programming. Don't get discouraged by challenges; they are opportunities to learn and grow. Keep pushing your limits, and you'll become a proficient coder in no time. Remember, every expert was once a beginner. So, keep coding, keep learning, and most importantly, enjoy the journey! 🚀 
