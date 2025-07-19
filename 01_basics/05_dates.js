@@ -45,5 +45,11 @@ console.log(OwnFormat.toString());
 
 
 //Timestamp:
-let MyTimestamp = Date.now()
+let MyTimestamp = Date.now()//milliseconds from jan 1,1970.
 console.log(MyTimestamp);
+
+//getTime():
+console.log(OwnFormat.getTime());
+
+//NOTE: For Javascript,the day starts from Monday,i.e,Monday is 1,Tuesday is 2 and so on.After applying getDay(),you will get a number in output.
+
