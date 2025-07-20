@@ -1,6 +1,7 @@
 "use strict";
 
-//***********Arrays in Javascript*********************
+/***********Arrays in Javascript*********************/
+
 
 //Difference between deep copy and shallow copy:
 //Shallow copy->the original object and copy point to the same reference,so,changing one of them will change the other as well.
