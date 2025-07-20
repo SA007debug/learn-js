@@ -70,7 +70,7 @@ Object.freeze(objCorrect)//The object is locked now.
 const objthis = {
   name: "India",//data property
   getName() {
-    return this.name;//this points to the same object under which it comes.Here,this points to objthis.
+    return this.name;//this points to the object that called the function.Here,this points to objthis.
   }//accessor property:here, getname() is the key and the return of the function is the value.
 };
 
