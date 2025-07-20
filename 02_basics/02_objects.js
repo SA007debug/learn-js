@@ -50,3 +50,28 @@ console.log(typeof objCorrect.sym);//string
 console.log(objCorrect[sym]);//India
 console.log(typeof objCorrect[sym]);//string
 //==> yadi key ek symbol hai to uski value ko access karne ke liye square bracket use karo,na ki dot.Dot use karoge to JS string key ko dhundne lagega.
+
+//You can add key-value pairs in the object:
+objCorrect.greeting = function(){
+    console.log("Hello!");
+    
+}
+
+objCorrect.age2 = 5
+console.log(objCorrect);
+console.log(objCorrect.greeting);//[Function(anonymous)],this is the reference of the function.
+console.log(objCorrect.greeting());//Hello! and undefined.
+
+//Freezing the object:
+Object.freeze(objCorrect)//The object is locked now.
+
+//this:
+//whenever you are referring to the same object,you use 'this':
+const objthis = {
+  name: "India",//data property
+  getName() {
+    return this.name;//this points to the same object under which it comes.Here,this points to objthis.
+  }//accessor property:here, getname() is the key and the return of the function is the value.
+};
+
+console.log(objthis.getName()); // India
