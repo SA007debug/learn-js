@@ -4,7 +4,7 @@
 //Two ways of declaring objects->literals and constructors.
 //Singleton is created in the constructor case but not in the literal case.
 
-const JsUser = {
+const JsUser = {//this is the literal case(non-singleton).
     0:"John",//commas after each property are necessary.
     "location":"India",
     email:"john@Yahoo.co.in",
@@ -43,12 +43,12 @@ const objCorrect = {
     [sym]:"India",//here,the key is a symbol.
     sym:"USA"//here,the key is a string.
 }//Now the object has a Symbol key, not a string key.
-console.log(objCorrect.sym);//USA
-console.log(typeof objCorrect.sym);//string
+//console.log(objCorrect.sym);//USA
+//console.log(typeof objCorrect.sym);//string
 //objCorrect.sym tries to access a property with the string key "sym", whose value is "USA".
 //The correct way is to use square bracket to access the value of a symbol key:
-console.log(objCorrect[sym]);//India
-console.log(typeof objCorrect[sym]);//string
+//console.log(objCorrect[sym]);//India
+//console.log(typeof objCorrect[sym]);//string
 //==> yadi key ek symbol hai to uski value ko access karne ke liye square bracket use karo,na ki dot.Dot use karoge to JS string key ko dhundne lagega.
 
 //You can add key-value pairs in the object:
@@ -58,9 +58,9 @@ objCorrect.greeting = function(){
 }
 
 objCorrect.age2 = 5
-console.log(objCorrect);
-console.log(objCorrect.greeting);//[Function(anonymous)],this is the reference of the function.
-console.log(objCorrect.greeting());//Hello! and undefined.
+//console.log(objCorrect);
+//console.log(objCorrect.greeting);//[Function(anonymous)],this is the reference of the function.
+//console.log(objCorrect.greeting());//Hello! and undefined.
 
 //Freezing the object:
 Object.freeze(objCorrect)//The object is locked now.
@@ -74,4 +74,17 @@ const objthis = {
   }//accessor property:here, getname() is the key and the return of the function is the value.
 };
 
-console.log(objthis.getName()); // India
+//console.log(objthis.getName()); // India
+
+
+//Singleton Object(another way of declaring an object):
+
+const AmazonUser = new Object()
+//==> An object is created whose name is AmazonUser.
+//Now we can add some properties in this object:
+AmazonUser.name = "John"
+AmazonUser.id = "John@google.com"
+AmazonUser.IsLoggenIn = true
+// console.log(AmazonUser);
+
+//When the value of an object is an object itself(nesting of objects):
