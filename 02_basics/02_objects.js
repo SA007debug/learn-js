@@ -88,3 +88,13 @@ AmazonUser.IsLoggenIn = true
 // console.log(AmazonUser);
 
 //When the value of an object is an object itself(nesting of objects):
+const User = {
+  email:"user@google.com",
+  fullname: {
+    Userfullname : {
+      firstname:"John",
+      lastname:"Cena",
+    }
+  }
+}
+console.log(User.fullname.Userfullname.firstname);
