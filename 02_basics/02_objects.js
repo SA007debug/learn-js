@@ -97,4 +97,24 @@ const User = {
     }
   }
 }
-console.log(User.fullname.Userfullname.firstname);
+//console.log(User.fullname.Userfullname.firstname);
+
+
+//How to combine multiple objects:
+//1.Use assign:
+const obj1 = {1:"a",2:"b",3:"c"}
+const obj2 = {4:"d",5:"e",6:"f"}
+//const obj3 = Object.assign({},obj1,obj2)//Always use empty curly braces before the objects.
+//console.log(obj3);
+
+//2.Use spread(more preffered):
+const obj3 = {...obj1,...obj2}
+console.log(obj3);
+
+//*********IMPORTANT*****************:
+//Object.keys(obj_name)->one parameter which is an object.Us object ki saari keys ek array mein store ho jati hai jisme baadme loop lgaya ja skta hai aur access kiya ja skta hai.
+//Object.values(obj_name)->same as Object.keys(),but this stores the values in an array.
+
+//Object.entries(obj_name)->converts all the key-value pairs into individual arrays => converts the whole object into arrays inside array.
+
+//obj_name.hasOwnProperty(key)->tells you whether the property exists inside the object or not(returns a boolean).
