@@ -118,3 +118,6 @@ console.log(obj3);
 //Object.entries(obj_name)->converts all the key-value pairs into individual arrays => converts the whole object into arrays inside array.
 
 //obj_name.hasOwnProperty(key)->tells you whether the property exists inside the object or not(returns a boolean).
+
+
+//De-structuring of objects->if you want to extract any value of the object in a 'cleaner way'.We already know the dot and square bracket method but de-structuring is cleaner than them(it is a syntactical sugar).
