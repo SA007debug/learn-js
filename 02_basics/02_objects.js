@@ -121,3 +121,6 @@ console.log(obj3);
 
 
 //De-structuring of objects->if you want to extract any value of the object in a 'cleaner way'.We already know the dot and square bracket method but de-structuring is cleaner than them(it is a syntactical sugar).
+
+//For API and JASON: https://chatgpt.com/c/68816d5a-d6cc-8010-82e3-a4e3682ab03a
+
