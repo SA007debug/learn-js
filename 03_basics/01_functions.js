@@ -13,20 +13,19 @@ function printValues2(num1,num2,...num){
 
 //Scope:
 //var scope ke bahar chala jata hai!!
-if(true){
+if(false){
     var a = 20
     const b = 25
 }
-a = 100
-// console.log(a);//100
-// console.log(b);//error:b is not defined.
+console.log(a);//20
+console.log(b);//error:b is not defined.
 let a1 = 10
-if(true){
+if(true){//what if instead of true there was false?
     let a1 = 200//ye andar hi reh jayega.
     const b1 = 20
 }
 //console.log(a1);//10
-//Agar koi variable declaration scope ke andar aata hai to vo bahar sirf tabhi jayega agar (i)var use hua ho ya phir (ii)bina kisi keyword kay declare kiya ho;agar let ya const use hua hai to vo scope ke andar hi reh jayega.
+//Agar koi variable declaration if-else ke scope ke andar aata hai aur vo if ya else true hai to vo bahar sirf tabhi jayega agar (i)var use hua ho ya phir (ii)bina kisi keyword kay declare kiya ho;agar let ya const use hua hai to vo scope ke andar hi reh jayega.
 let a2 = 10
 if(true){
     a2 = 200//ye bahar aa jayega
@@ -45,5 +44,5 @@ function one(){
     two()
     console.log(website);
 }
-one()
+//one()
 //Kisi bhi function ke andar tabhi jana hai jab use call kiya ho.
