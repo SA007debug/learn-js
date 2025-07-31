@@ -39,14 +39,57 @@ function greet3(){
 }
 // greet3()
 // console.log(name3);//Sam
-//==> agar function ko call kiya hai to variable change ho jayega.Isi ko kehte hai Scope pollution.The function accidentally pollutes the global scope by modifying name. This is risky in large projects.
+//==> agar function ko call kiya hai to variable change ho jayega.Isi ko kehte hai Scope pollution.The function accidentally pollutes the global scope by modifying name3. This is risky in large projects.
 
 //Writing the greet3 function(just upar wala) in iife form:
-let name4 = "John";//Semocolon is necessary just before an iife!!
-(function greet3iife(){
-    name4 = "Sam"
-    console.log("HELLO IIFE!");
-})();
-console.log(name4);//Sam
+// let name4 = "John";//Semocolon is necessary just before an iife!!
+// (function greet3iife(){
+//     name4 = "Sam"
+//     console.log("HELLO IIFE!");
+// })();
+// console.log(name4);//Sam
 //==> variable change ho gya.If you want to protect the global varible,use let/const inside the function.This applies to both normal and iife.
-//https://chatgpt.com/share/68886cfb-6040-8010-8ded-694f49a6d127
+//https://chatgpt.com/share/68886cfb-6040-8010-8ded-694f49a6d12
+
+
+
+//Study the three cases carefully:
+
+//1.
+(function first(){
+    console.log("Hello");    
+})()
+console.log("Hi");
+//the output will be Hello and Hi.No issue here
+
+
+//2.
+(function first(){
+    console.log("Hello");    
+})()
+function meet(){
+    console.log("Hi");    
+}
+meet();
+//the output will be again Hello and Hi.No issue here also.
+
+
+//3.
+// (function first(){
+//     console.log("Hello");    
+// })()
+// (function second(){
+//     console.log("Hi");    
+// })()
+//Here,the output will be Hello and then error.
+
+//So,in the first two cases,there was no issue.But,in the second case there are two consecutive iifes.
+//Just before an iife,a semicolon is necessary!!
+//Therefore the correct syntax is:
+(function first(){
+    console.log("Hello");    
+})();
+(function second(){
+    console.log("Hi");    
+})()
+//the output will be Hello and Hi.
