@@ -93,3 +93,4 @@ meet();
     console.log("Hi");    
 })()
 //the output will be Hello and Hi.
+//https://chatgpt.com/c/688b9e85-87ac-8010-9e68-220d3d349b4f
