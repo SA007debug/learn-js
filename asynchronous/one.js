@@ -25,7 +25,7 @@
 
 
 //Callback:
-//A function which is passed as an argument to another function is called a callback.
+//A callback is a function passed into another function as an argument,and it's called after the first function finishes its task (often used in asynchronous operations).
 // function greet(name){
 //     console.log(`How are you ${name}?`)
 // }
@@ -35,3 +35,4 @@
 // greet2(greet,"Sam")
 //Here,greet is a callback.
 //setTimeout also uses callback.
+// https://chatgpt.com/share/689268cd-77e0-8010-81fa-510004a8990f
