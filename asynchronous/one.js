@@ -72,3 +72,4 @@ function getdata(data){
 getdata(1);
 getdata(2);
 getdata(3);
+//After 2 seconds,all three will get executed at the same time.
