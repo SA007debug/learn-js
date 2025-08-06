@@ -64,12 +64,36 @@
 //The for loop + 10 console logs are blocking code.
 //https://chatgpt.com/share/68937cae-5744-8010-b230-b577fafab7f4
 
-function getdata(data){
-  setTimeout(() => {
-    console.log(`Data is ${data}`)
-  },2000);
-}
-getdata(1);
-getdata(2);
-getdata(3);
+// function getdata(data){
+//   setTimeout(() => {
+//     console.log(`Data is ${data}`)
+//   },2000);
+// }
+// getdata(1);
+// getdata(2);
+// getdata(3);
 //After 2 seconds,all three will get executed at the same time.
+
+
+//Promises in Javascript:
+let promise = new Promise(function(resolve, reject) {
+  let pizzaReady = false;//this is set by the user
+//The first parameter is always the resolve function.
+//The second parameter is always the reject function.
+  if (pizzaReady) {
+    resolve("Here is your pizza!");
+  } else {
+    reject("Sorry, no pizza today.");
+  }
+});
+promise
+  .then(function(result) {
+    console.log("Success:", result);
+  })
+  .catch(function(error) {
+    console.log("Error:", error);
+  });
+//https://chatgpt.com/share/6893aa26-4774-8010-9b48-4e654cc43880
+//.then() lets you do something with the result that the promise gives in case of success.
+//.catch() lets you do something with the result that the promise gives in case of failure.
+//If the promise has succeeded;.then() will run but if the promise has failed; .catch() will run.
