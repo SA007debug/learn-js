@@ -46,7 +46,7 @@ getData(1);
 console.log("How are you?");
 for(let i = 0; i < 1e5;i++){
   console.log("I am fine.");
-}//This is a blocking loop. JS is single-threaded, so no other code can run while this loop is executing.
+}
 console.log("Hi");
 console.log("Hi");
 console.log("Hi");
