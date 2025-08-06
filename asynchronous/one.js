@@ -36,30 +36,39 @@
 //Here,greet is a callback.
 //setTimeout also uses callback.
 //https://chatgpt.com/share/689268cd-77e0-8010-81fa-510004a8990f
-function getData(data){
-  setTimeout(() => {
-    console.log(`Data of ${data}`);
-  },0)
-}
-//setTimeout(..., 0) ≠ immediate. It just means “as soon as possible after current work finishes.”
-getData(1);
-console.log("How are you?");
-for(let i = 0; i < 1e5;i++){
-  console.log("I am fine.");
-}
-console.log("Hi");
-console.log("Hi");
-console.log("Hi");
-console.log("Hi");
-console.log("Hi");
-console.log("Hi");
-console.log("Hi");
-console.log("Hi");
-console.log("Hi");
-console.log("Hi");
+// function getData(data){
+//   setTimeout(() => {
+//     console.log(`Data of ${data}`);
+//   },0)
+// }
+// //setTimeout(..., 0) ≠ immediate. It just means “as soon as possible after current work finishes.”
+// getData(1);
+// console.log("How are you?");
+// for(let i = 0; i < 1e5;i++){
+//   console.log("I am fine.");
+// }
+// console.log("Hi");
+// console.log("Hi");
+// console.log("Hi");
+// console.log("Hi");
+// console.log("Hi");
+// console.log("Hi");
+// console.log("Hi");
+// console.log("Hi");
+// console.log("Hi");
+// console.log("Hi");
 //Even though the delay is 0ms, the callback must wait until all synchronous code finishes.Once everything finishes, the setTimeout callback is finally allowed to run.Until all synchronous code is completely done, the setTimeout callback won't run, even with 0ms.
 // Blocking code means synchronous code that:
 //(i)Runs immediately
 //(ii)Prevents JavaScript from doing anything else until it finishes.
 //The for loop + 10 console logs are blocking code.
 //https://chatgpt.com/share/68937cae-5744-8010-b230-b577fafab7f4
+
+function getdata(data){
+  setTimeout(() => {
+    console.log(`Data is ${data}`)
+  },2000);
+}
+getdata(1);
+getdata(2);
+getdata(3);
