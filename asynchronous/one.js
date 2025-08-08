@@ -97,6 +97,7 @@
 //.then() lets you do something with the result that the promise gives in case of success.
 //.catch() lets you do something with the result that the promise gives in case of failure.
 //If the promise has succeeded;.then() will run but if the promise has failed; .catch() will run.
+//An example of  callback chaining:
 function getData(data,NextgetData){
     setTimeout(()=> {
       console.log(`Fetching Data.....`);
