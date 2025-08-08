@@ -129,17 +129,17 @@
 //Right now if you run this code in the console then it will show the state of the promise as 'pending' as there is neither resolve nor reject used as of now.
 //But, if you add resolve and store the promise in a variable,then it will show 'fulfilled' as the promise state.
 //Note:The API will return the result after 7 seconds(as mentioned in setTimeout) but it will immediately return a promise(which will be in pending state under those 7 seconds).After 7 seconds,the state of promise will change to either fulfilled or rejected.
-// function getData(dataId, getNextData) {
-//   return new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       console.log("data", dataId);
-//       resolve("Successfully Done!");
-//       if (getNextData) {
-//         getNextData();
-//       }
-//     }, 7000);
-//   });
-// }
+function getData(dataId, getNextData) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("data", dataId);
+      resolve("Successfully Done!");
+      if (getNextData) {
+        getNextData();
+      }
+    }, 7000);
+  });
+}
 //And if you add reject,it will show 'rejected' as the promise state:
 // function getData(dataId, getNextData) {
 //   return new Promise((resolve, reject) => {
