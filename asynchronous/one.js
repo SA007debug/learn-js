@@ -73,7 +73,7 @@
 // getdata(2);
 // getdata(3);
 //After 2 seconds,all three will get executed at the same time.
-
+//Note:setTimeout() is used to simulate actual delay from a real server.
 
 //Promises in Javascript:
 // let promise = new Promise(function(resolve, reject) {
@@ -98,19 +98,56 @@
 //.catch() lets you do something with the result that the promise gives in case of failure.
 //If the promise has succeeded;.then() will run but if the promise has failed; .catch() will run.
 //An example of  callback chaining:
-function getData(data,NextgetData){
-    setTimeout(()=> {
-      console.log(`Fetching Data.....`);
-    },500);
-    setTimeout(() => {
-      console.log(`Data is ${data}.`);   
-      if(NextgetData){
-        NextgetData();
-      }   
-    },5000)
-}
+// function getData(data,NextgetData){
+//     setTimeout(()=> {
+//       console.log(`Fetching Data.....`);
+//     },500);
+//     setTimeout(() => {
+//       console.log(`Data is ${data}.`);   
+//       if(NextgetData){
+//         NextgetData();
+//       }   
+//     },5000)
+// }
 // getData(1,NextgetData(2));This is wrong,the parentheses will immediately execute NextgetData.
 //Arrow method:
 // getData(1,() => getData(2,() => getData(3,() => getData(4))));
 //Bind Method:
 // getData(1,getData.bind(null,2,getData.bind(null,3,getData.bind(null,4))));
+//An API always returns a promise to us and we have to handle that promise.
+//The below function can be seen as an API returning a promise:
+// function getData(dataId, getNextData) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("data", dataId);
+//       if (getNextData) {
+//         getNextData();
+//       }
+//     }, 2000);
+//   });
+// }
+//Right now if you run this code in the console then it will show the state of the promise as 'pending' as there is neither resolve nor reject used as of now.
+//But, if you add resolve and store the promise in a variable,then it will show 'fulfilled' as the promise state.
+//Note:The API will return the result after 7 seconds(as mentioned in setTimeout) but it will immediately return a promise(which will be in pending state under those 7 seconds).After 7 seconds,the state of promise will change to either fulfilled or rejected.
+function getData(dataId, getNextData) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("data", dataId);
+      resolve("Successfully Done!");
+      if (getNextData) {
+        getNextData();
+      }
+    }, 7000);
+  });
+}
+//And if you add reject,it will show 'rejected' as the promise state:
+// function getData(dataId, getNextData) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       reject("Error is found.")
+//       if (getNextData) {
+//         getNextData();
+//       }
+//     }, 2000);
+//   });
+// }
