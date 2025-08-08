@@ -110,5 +110,7 @@ function getData(data,NextgetData){
     },5000)
 }
 // getData(1,NextgetData(2));This is wrong,the parentheses will immediately execute NextgetData.
+//Arrow method:
 // getData(1,() => getData(2,() => getData(3,() => getData(4))));
-getData(1,getData.bind(null,2,getData.bind(null,3,getData.bind(null,4))));
+//Bind Method:
+// getData(1,getData.bind(null,2,getData.bind(null,3,getData.bind(null,4))));
