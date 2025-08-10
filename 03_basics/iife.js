@@ -34,7 +34,7 @@ function greet2(){
 
 let name3 = "John"
 function greet3(){
-    name3 = "Sam"
+    name3 = "Sam";
     console.log("HELLO Sam!");    
 }
 // greet3()
