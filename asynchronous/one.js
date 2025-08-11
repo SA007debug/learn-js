@@ -182,29 +182,10 @@ new Promise((resolve) => {
 });
 //But in this code 1 2 and 4 are coming at the same time after 3 seconds.This is because only in the first step there is a delay and there is no delay between the .then() functions.
 
-
-function fetchData() {
-  fetch('https://api.example.com/data')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return response.json(); // This also returns a Promise
-    })
-    .then(data => {
-      console.log(data);
-    })
-    .catch(error => {
-      console.error('There was a problem:', error);
-    });
-}
-
-fetchData();
-
-//Using async/await:
+//Using async/await,which is even better than promise chaining:
 async function fetchData() {
   try {
-    const response = await fetch('https://api.example.com/data'); // Pauses here until the fetch promise resolves
+    const response = await fetch('https://api.example.com/data'); // Pauses here until the fetch promise resolves.
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }
@@ -216,3 +197,8 @@ async function fetchData() {
 }
 
 fetchData();
+//Some important points:
+//const response = fetch('https://api.example.com/data'):
+//When you call fetch(),the browser immediately creates a promise and immediately returns the promise to your code.The promise is initialy in the pending state,i.e,when the code receives the promise from the browser,the promise is at pending state.
+//The browser then parallely sends the HTTP request to the URL server and when the server responds,the browser updates the state of the promise to either fulfilled or rejected.
+//https://g.co/gemini/share/747953b24795
