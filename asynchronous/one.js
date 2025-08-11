@@ -129,17 +129,17 @@
 //Right now if you run this code in the console then it will show the state of the promise as 'pending' as there is neither resolve nor reject used as of now.
 //But, if you add resolve and store the promise in a variable,then it will show 'fulfilled' as the promise state.
 //Note:The API will return the result after 7 seconds(as mentioned in setTimeout) but it will immediately return a promise(which will be in pending state under those 7 seconds).After 7 seconds,the state of promise will change to either fulfilled or rejected.
-function getData(dataId, getNextData) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      console.log("data", dataId);
-      resolve("Successfully Done!");
-      if (getNextData) {
-        getNextData();
-      }
-    }, 7000);
-  });
-}
+// function getData(dataId, getNextData) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("data", dataId);
+//       resolve("Successfully Done!");
+//       if (getNextData) {
+//         getNextData();
+//       }
+//     }, 7000);
+//   });
+// }
 //And if you add reject,it will show 'rejected' as the promise state:
 // function getData(dataId, getNextData) {
 //   return new Promise((resolve, reject) => {
@@ -151,3 +151,68 @@ function getData(dataId, getNextData) {
 //     }, 2000);
 //   });
 // }
+// let promise = new Promise((resolve,reject) => {
+//   setTimeout(() => {
+//     reject("Failure!");
+//     resolve("Success!");
+//   },2000)
+// })
+// promise.then((res) =>{
+//   console.log(`Output is ${res}`);
+// })
+// promise.catch((err) => {
+//   console.log(`Output is ${err}`)
+// })
+
+//Example of Promise Chaining:
+//https://chatgpt.com/share/689709a8-79f8-8010-b19f-03fedcfa91d9
+new Promise((resolve) => {
+  setTimeout(() => resolve(1), 3000);
+})
+.then((num) => {
+  console.log(num); // 1
+  return num * 2; // Automatically wrapped in a Promise
+})
+.then((num) => {
+  console.log(num); // 2
+  return num * 2;
+})
+.then((num) => {
+  console.log(num); // 4
+});
+//But in this code 1 2 and 4 are coming at the same time after 3 seconds.This is because only in the first step there is a delay and there is no delay between the .then() functions.
+
+
+function fetchData() {
+  fetch('https://api.example.com/data')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json(); // This also returns a Promise
+    })
+    .then(data => {
+      console.log(data);
+    })
+    .catch(error => {
+      console.error('There was a problem:', error);
+    });
+}
+
+fetchData();
+
+//Using async/await:
+async function fetchData() {
+  try {
+    const response = await fetch('https://api.example.com/data'); // Pauses here until the fetch promise resolves
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const data = await response.json(); // Pauses again until the .json() promise resolves
+    console.log(data); // Runs only after both promises above have resolved
+  } catch (error) {
+    console.error('There was a problem:', error);
+  }
+}
+
+fetchData();
